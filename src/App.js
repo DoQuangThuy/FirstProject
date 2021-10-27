@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import styled from 'styled-components';
+
+const Button = styled.button`
+  background-color: #eeeeee;
+  color: #0277bd;
+  padding: 5px 15px;
+  outline: 0;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+`
+
+function clickButton(){
+  alert('You clicked the button');
+}
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className= "App">
+      <div className="content">
+        <Button onClick={clickButton} >
+          Randomize
+        </Button>
+        <Button onClick={clickButton} >
+          Add Dataset
+        </Button>
+        <Button onClick={clickButton} >
+          Add Data
+        </Button>
+        <Button onClick={clickButton} >
+          Remove Dataset
+        </Button>
+        <Button onClick={clickButton} >
+          Remove Data
+        </Button>
+      </div>
     </div>
   );
 }
